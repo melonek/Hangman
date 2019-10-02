@@ -6,6 +6,8 @@ body {
   background: #000000;
   color: lightgray;
   font-size: 28px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700px;
 }
 
 #container {
