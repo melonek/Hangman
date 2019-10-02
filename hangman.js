@@ -1,8 +1,18 @@
-var keyword = "Saying to me bitch please";
+var keyword = "chinesse tea";
 keyword = keyword.toUpperCase();
 var deadMan = 0;
 
 var length = keyword.length;
+
+var yes = new Audio("yes.wav");
+var no = new Audio("no.wav");
+var bgmusic = new Audio("song.wav");
+
+document.addEventListener("click", musicPlay);
+function musicPlay() {
+  bgmusic.play();
+  bgmusic.volume = 0.2;
+}
 
 var keywordOne = "";
 
@@ -16,7 +26,6 @@ function writeSaying() {
 }
 
 window.onload = start;
-
 var letters = new Array(26);
 
 letters[0] = "A";
@@ -83,6 +92,8 @@ function check(num) {
     }
   }
   if (guessed == true) {
+    yes.play();
+    yes.volume = 0.4;
     var element = "lit" + num;
     document.getElementById(element).style.background = "#003300";
     document.getElementById(element).style.color = "#00C000";
@@ -91,6 +102,8 @@ function check(num) {
 
     writeSaying();
   } else {
+    no.play();
+    no.volume = 0.6;
     var element = "lit" + num;
     document.getElementById(element).style.background = "#330000";
     document.getElementById(element).style.color = "#C00000";
@@ -109,6 +122,13 @@ function check(num) {
   if (keyword == keywordOne)
     document.getElementById("alphabet").innerHTML =
       "Yes, you've guessed it right: " +
+      keyword +
+      '<br><br/><span class="reset" onclick="location.reload()">ONCE AGAIN?</span>';
+
+  //losing
+  if (deadMan >= 9)
+    document.getElementById("alphabet").innerHTML =
+      "You lost! The answer was: " +
       keyword +
       '<br><br/><span class="reset" onclick="location.reload()">ONCE AGAIN?</span>';
 }
