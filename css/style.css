@@ -48,3 +48,9 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.letter:hover {
+  background: #222222;
+  color: white;
+  border: 3px solid white;
+}

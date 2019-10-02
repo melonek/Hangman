@@ -49,8 +49,16 @@ function start() {
   var contentOfAlphabet = "";
 
   for (i = 0; i < 25; i++) {
+    var element = "lit" + i;
     contentOfAlphabet =
-      contentOfAlphabet + '<div class="letter">' + letters[i] + "</div>";
+      contentOfAlphabet +
+      '<div class="letter" onclick="check(' +
+      i +
+      ')" id="' +
+      element +
+      '">' +
+      letters[i] +
+      "</div>";
     if ((i + 1) % 6 == 0)
       contentOfAlphabet = contentOfAlphabet + '<div style="clear:both;"></div>';
   }
@@ -58,4 +66,8 @@ function start() {
   document.getElementById("alphabet").innerHTML = contentOfAlphabet;
 
   writeSaying();
+}
+
+function check(num) {
+  alert(num);
 }
