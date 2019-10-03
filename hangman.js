@@ -1,4 +1,63 @@
-var keyword = "chinesse tea";
+var textArray = [
+  "cottage",
+  "fortune",
+  "mention",
+  "certainty",
+  "arranging",
+  "smallness",
+  "conveying",
+  "plate",
+  "grave",
+  "dissimilar",
+  "favourable",
+  "unreserved",
+  "expression",
+  "contrasted",
+  "removing",
+  "pretended",
+  "listening",
+  "perceived",
+  "denoting",
+  "jointure",
+  "occasion",
+  "raillery",
+  "Introduced",
+  "imprudence",
+  "unpleasing",
+  "acceptance",
+  "Exeter",
+  "wisdom",
+  "weather",
+  "repeated",
+  "speaking",
+  "Excited",
+  "hastily",
+  "pasture",
+  "observe",
+  "frankness",
+  "cordially",
+  "immediate",
+  "recommend",
+  "contained",
+  "Imprudence",
+  "insensible",
+  "literature",
+  "solicitude",
+  "affronting",
+  "possession",
+  "Compass",
+  "journey",
+  "request",
+  "thoughts proposal",
+  "decisively dispatched",
+  "supposing suspicion",
+  "preference",
+  "excellence"
+];
+var rand = Math.floor(Math.random() * textArray.length);
+var textArrayVariable = textArray[rand];
+
+var keyword = textArrayVariable;
 keyword = keyword.toUpperCase();
 var deadMan = 0;
 
@@ -28,37 +87,39 @@ function writeSaying() {
 window.onload = start;
 var letters = new Array(26);
 
-letters[0] = "A";
-letters[1] = "B";
-letters[2] = "C";
-letters[3] = "D";
-letters[4] = "E";
-letters[5] = "F";
-letters[6] = "G";
-letters[7] = "H";
-letters[8] = "I";
-letters[9] = "J";
-letters[10] = "K";
-letters[11] = "L";
-letters[12] = "M";
-letters[13] = "N";
-letters[14] = "O";
-letters[15] = "P";
-letters[16] = "Q";
-letters[17] = "R";
-letters[18] = "S";
-letters[19] = "T";
-letters[20] = "U";
-letters[21] = "V";
-letters[22] = "W";
-letters[23] = "X";
-letters[24] = "Y";
-letters[25] = "Z";
+letters = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z"
+];
 
 function start() {
   var contentOfAlphabet = "";
 
-  for (i = 0; i < 25; i++) {
+  for (i = 0; i < letters.length; i++) {
     var element = "lit" + i;
     contentOfAlphabet =
       contentOfAlphabet +
